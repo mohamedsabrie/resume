@@ -1,26 +1,7 @@
-import styled from "styled-components";
 import { Link } from "react-scroll";
-import { useEffect } from "react";
-import gsap from "gsap";
 
 function HeroSection() {
-  useEffect(() => {
-    const t1 = gsap.timeline();
-    
-
-    t1.from(".name", {
-      x: 100,
-      duration: 1,
-      opacity: 0,
-      ease: "power3.inOut",
-    })
-    .from(".job_title", {
-      x: -100,
-      duration: 1,
-      opacity: 0, 
-      ease: "power3.inOut",
-    });
-  }, []);
+  
   return (
     <div id="home" className="bg-hero-background bg-cover bg-center  relative ">
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-70" />

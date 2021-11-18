@@ -5,9 +5,39 @@ import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 import Projects from "../components/Projects";
 import { useEffect } from "react";
+import gsap from 'gsap'
 
 
 export default function Home() {
+  
+  useEffect(() => {
+    const t1 = gsap.timeline();
+    
+    t1.from(".header_logo", {
+      opacity: 0,
+      x: -100,
+      ease: "power4.out",
+    })
+    gsap.utils.toArray("header li").forEach((link, i) => {
+      t1.from(link, {
+        opacity: 0,
+        x: 100,
+        ease: "power4.out", 
+      });
+    });
+    t1.from(".name", {
+      x: 100,
+      opacity: 0,
+      duration:1.5,
+      ease: "elastic",
+    })
+    .from(".job_title", {
+      x: -100,
+      opacity: 0, 
+      ease: "power3.inOut",
+    });
+
+  }, [])
 
   return (
     <div>

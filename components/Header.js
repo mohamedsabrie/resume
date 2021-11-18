@@ -17,28 +17,7 @@ function Header() {
       
       }
     });
-
-    gsap.utils.toArray("header li").forEach((link, i) => {
-      gsap.from(link, {
-        duration: 2,
-        opacity: 0,
-        x: 100,
-        delay: 0.5 * (i + 1), 
-        ease: "power4.out", 
-      });
-    });
-
-    gsap.from(".header_logo", {
-      duration: 2,
-      opacity: 0,
-      x: -100,
-      delay: 0.5, 
-      ease: "power4.out",
-    });
-
-   
-
-    
+  
   }, []);
 
   return (
