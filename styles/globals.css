@@ -32,10 +32,15 @@
     bottom:0;
     left: -100%;
     background-color: #FFF;
-    transition: all 0.3s ease-out;
 
   }
   header li:hover::after{
-    left: 0
+    left: 0;
+    transition: all 0.3s ease-out;
+  }
+  header .animate_out::after{
+     left: 100%;
+     transition: all 0.3s ease-out;
+
   }
 }

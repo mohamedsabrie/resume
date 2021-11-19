@@ -17,6 +17,17 @@ function Header() {
       
       }
     });
+
+    const headerLinks = document.querySelectorAll("header li");
+    headerLinks.forEach(link => {
+      link.addEventListener('mouseleave', ()=>{
+        link.classList.add("animate_out");
+        setTimeout(() => {
+          link.classList.remove("animate_out")
+      }, 300);
+      });
+      
+    })
   
   }, []);
 
