@@ -43,7 +43,7 @@ function Header() {
           
 
           {/* left side */}
-          <div className="sm:hidden">
+          <div className="menu_icon sm:hidden">
             <MenuIcon  className="h-8 text-white " /> 
           </div>
           <nav className="hidden sm:inline-flex">

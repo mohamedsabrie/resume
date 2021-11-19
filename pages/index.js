@@ -10,21 +10,39 @@ import gsap from 'gsap'
 
 export default function Home() {
   
+  // Initialise
+  
   useEffect(() => {
-    const t1 = gsap.timeline();
+  const t1 = gsap.timeline();
+  var mediaQuery = window.matchMedia("(min-width: 640px)");
+ 
+
     
     t1.from(".header_logo", {
       opacity: 0,
       x: -100,
       ease: "power4.out",
-    },"+=1")
-    gsap.utils.toArray("header li").forEach((link, i) => {
-      t1.from(link, {
-        opacity: 0,
-        x: 100,
-        ease: "power4.out", 
-      });
-    });
+    },"+=1");
+
+    function buildConditionalTween(mediaQuery){
+      if(mediaQuery.matches){
+        gsap.utils.toArray("header li").forEach((link) => {
+          t1.from(link, {
+            opacity: 0,
+            x: 100,
+            ease: "power4.out", 
+          });
+        });
+      }else{
+         t1.from(".menu_icon", {
+          opacity: 0,
+          x: 100,
+          ease: "power4.out", 
+         })
+      }
+    };
+    buildConditionalTween(mediaQuery);
+    
     t1.from(".name", {
       x: 100,
       opacity: 0,
