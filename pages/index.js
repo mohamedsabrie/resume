@@ -17,7 +17,7 @@ export default function Home() {
       opacity: 0,
       x: -100,
       ease: "power4.out",
-    })
+    },"+=1")
     gsap.utils.toArray("header li").forEach((link, i) => {
       t1.from(link, {
         opacity: 0,
