@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.5",
+    "@tailwindcss/aspect-ratio": "^0.3.0",
     "babel-plugin-styled-components": "^1.13.2",
     "gsap": "^3.8.0",
     "locomotive-scroll": "^4.1.3",

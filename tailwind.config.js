@@ -13,13 +13,14 @@ module.exports = {
     extend: {
       backgroundImage: (theme) => ({
         "hero-background": "url('/hero-background.jpg')",
-        
       }),
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [require('tailwind-scrollbar-hide')
-],
+  plugins: [
+    require("tailwind-scrollbar-hide"),
+    require("@tailwindcss/aspect-ratio"),
+  ],
 };
