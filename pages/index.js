@@ -6,6 +6,7 @@ import HeroSection from "../components/HeroSection";
 import Projects from "../components/Projects";
 import { useEffect } from "react";
 import gsap from 'gsap'
+import ToTop from "../components/ToTop";
 
 
 export default function Home() {
@@ -77,6 +78,7 @@ export default function Home() {
         <About />
         <Projects />
         <Contact />
+        <ToTop />
       </div>
     </div>
   );

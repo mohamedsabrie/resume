@@ -9,6 +9,8 @@
   html, body{
     @apply scrollbar-hide;
     font-family: 'Modern Antiqua', cursive;
+    scroll-behavior: smooth;
+
   }
 }
 
@@ -18,6 +20,13 @@
   }
   .bg-primary{
     @apply bg-green-500
+  }
+  .text-primary{
+    @apply text-green-500
+  }
+ 
+  .hide{
+    display: none
   }
   *{
     user-select: none;
