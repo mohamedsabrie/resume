@@ -19,12 +19,15 @@
   .bg-primary{
     @apply bg-green-500
   }
-  header li{
+  *{
+    user-select: none;
+  }
+  ul li{
     position: relative;
     overflow: hidden;
     padding-bottom: 3px;
   }
-  header li::after{
+  ul li::after{
     content: "";
     height: 2px;
     width: 100%;
@@ -34,11 +37,11 @@
     background-color: #FFF;
 
   }
-  header li:hover::after{
+  ul li:hover::after{
     left: 0;
     transition: all 0.3s ease-out;
   }
-  header .animate_out::after{
+  ul .animate_out::after{
      left: 100%;
      transition: all 0.3s ease-out;
 

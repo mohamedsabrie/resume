@@ -13,6 +13,8 @@ export default function Home() {
   // Initialise
   
   useEffect(() => {
+
+    
   const t1 = gsap.timeline();
   var mediaQuery = window.matchMedia("(min-width: 640px)");
  

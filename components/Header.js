@@ -1,24 +1,23 @@
 import { Link } from "react-scroll";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from 'next/image'
 import {MenuIcon} from '@heroicons/react/outline'
-import gsap from 'gsap'
-import styled from "styled-components";
+import NavMenu from "./NavMenu";
 
 function Header() {
   const headerRef = useRef(null);
+  const [menuIsOpen, setMenuIsOpen] = useState(false)
 
   useEffect(() => {
     window.addEventListener("scroll", function () {
       if (this.scrollY > 100) {
-        headerRef.current.classList.add("bg-primary");
+        headerRef?.current?.classList.add("bg-primary");
       } else {
-        headerRef.current.classList.remove("bg-primary");
+        headerRef?.current?.classList.remove("bg-primary");
       
       }
     });
-
-    const headerLinks = document.querySelectorAll("header li");
+    const headerLinks = document.querySelectorAll("ul li");
     headerLinks.forEach(link => {
       link.addEventListener('mouseleave', ()=>{
         link.classList.add("animate_out");
@@ -28,13 +27,15 @@ function Header() {
       });
       
     })
-  
   }, []);
 
   return (
-    <div ref={headerRef} className=" z-50 fixed w-screen  top-0 left-0  transition-all p-6  ">
+    <div ref={headerRef} className=" z-40 fixed w-screen  top-0 left-0  transition-all p-6  ">
       <div className="container mx-auto">
         <header className="  flex justify-between items-center text-white ">
+          {menuIsOpen && (
+            <NavMenu setMenuIsOpen = {setMenuIsOpen} />
+          )}
           {/* right side */}
           <div className="header_logo flex items-center space-x-5">
             <Image className="rounded-full"  src="/profile-pic.webp" alt=""  width={32} height={32}/>
@@ -43,8 +44,8 @@ function Header() {
           
 
           {/* left side */}
-          <div className="menu_icon sm:hidden">
-            <MenuIcon  className="h-8 text-white " /> 
+          <div className="menu_icon sm:hidden" onClick = {() => setMenuIsOpen(true)}>
+            <MenuIcon  className="h-8 text-white cursor-pointer" /> 
           </div>
           <nav className="hidden sm:inline-flex">
             <ul className="space-x-8 text-lg flex ">
