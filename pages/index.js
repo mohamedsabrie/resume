@@ -56,7 +56,7 @@ export default function Home() {
       opacity: 0, 
       ease: "power4.out",
     })
-    .from(".hero_button", {
+    .from(".hero_buttons", {
       y: 100,
       opacity: 0, 
       ease: "power3.out",

@@ -16,14 +16,14 @@ function HeroSection() {
               <span className="job_title inline-block">Front End Developer | React.js</span>
             </h3>
           </div>
-          <div className="flex flex-col sm:flex-row  justify-center items-center space-y-8 sm:space-y-0 sm:space-x-8 mt-10">
+          <div className="hero_buttons flex flex-col sm:flex-row  justify-center items-center space-y-8 sm:space-y-0 sm:space-x-8 mt-10">
             <Link
               to="about"
               spy={true}
               smooth={true}
               offset={-63}
               duration={500}
-              className="hero_button bg-gray-200 hover:bg-gray-300 text-center w-40 px-8 py-3 rounded-md text-lg font-semibold cursor-pointer   transition-all duration-500"
+              className=" bg-gray-200 hover:bg-gray-300 text-center w-40 px-8 py-3 rounded-md text-lg font-semibold cursor-pointer   transition-all duration-500"
             >
               About me
             </Link>
@@ -33,7 +33,7 @@ function HeroSection() {
               smooth={true}
               offset={-63}
               duration={500}
-              className=" hero_button bg-primary hover:bg-green-600  text-center text-white w-40 px-8 py-3 rounded-md text-lg font-semibold cursor-pointer   transition-all duration-500"
+              className=" bg-primary hover:bg-green-600  text-center text-white w-40 px-8 py-3 rounded-md text-lg font-semibold cursor-pointer   transition-all duration-500"
             >
               Projects
             </Link>
