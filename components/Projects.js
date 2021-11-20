@@ -51,7 +51,7 @@ const projects = [
     imageAlt: "Whatsapp image",
   },
   {
-    id: 7,
+    id: 8,
     name: "Slack Clone",
     href: "https://slack-clone-46dc4.web.app/",
     imageSrc: "/images/slack-clone.png",
