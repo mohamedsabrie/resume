@@ -16,7 +16,7 @@ function ToTop() {
             } else {
                 componentRef?.current?.classList.add("hide");
             }
-          });
+          }); 
 
           
     }, [])
