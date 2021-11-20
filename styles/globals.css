@@ -10,6 +10,8 @@
     @apply scrollbar-hide;
     font-family: 'Modern Antiqua', cursive;
     scroll-behavior: smooth;
+    
+
 
   }
 }

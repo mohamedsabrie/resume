@@ -8,11 +8,13 @@ module.exports = {
       screens: {
         xl: "1165.82px",
       },
-    },
+  },
 
     extend: {
       backgroundImage: (theme) => ({
         "hero-background": "url('/hero-background.jpg')",
+        "contact-bg": "url('/contact-bg.png')",
+        "about-bg": "url('/images/about.jpg')",
       }),
     },
   },
