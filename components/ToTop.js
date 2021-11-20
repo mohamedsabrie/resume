@@ -11,7 +11,7 @@ function ToTop() {
     }
     useEffect(() => {
         window.addEventListener("scroll", function () {
-            if (this.scrollY > 20) {
+            if (this.scrollY > 100) {
                 componentRef?.current?.classList.remove("hide");
             } else {
                 componentRef?.current?.classList.add("hide");
