@@ -3,13 +3,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Modern+Antiqua&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Modern+Antiqua&display=swap');
 @layer base{
   html, body{
-    @apply scrollbar-hide;
-    font-family: 'Modern Antiqua', cursive;
+    @apply scrollbar-hide overflow-x-hidden;
     scroll-behavior: smooth;
+    font-family: 'Itim', cursive;
     
 
 
