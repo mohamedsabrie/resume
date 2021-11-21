@@ -3,10 +3,15 @@ import { useEffect, useRef, useState } from "react";
 import Image from 'next/image'
 import {MenuIcon} from '@heroicons/react/outline'
 import NavMenu from "./NavMenu";
+import gsap from 'gsap'
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
 
 function Header() {
   const headerRef = useRef(null);
-  const [menuIsOpen, setMenuIsOpen] = useState(false)
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+  gsap.registerPlugin(ScrollTrigger);
+
 
   useEffect(() => {
     window.addEventListener("scroll", function () {
@@ -17,6 +22,20 @@ function Header() {
       
       }
     });
+    const showAnim = gsap.from('.header_container', { 
+      yPercent: -100,
+      paused: true,
+      duration: 0.2
+    }).progress(1);
+    
+    ScrollTrigger.create({
+      start: "top top",
+      end: 99999,
+      onUpdate: (self) => {
+        self.direction === -1 ? showAnim.play() : showAnim.reverse()
+      }
+    });
+
     const headerLinks = document.querySelectorAll("ul li");
     headerLinks.forEach(link => {
       link.addEventListener('mouseleave', ()=>{
@@ -30,7 +49,7 @@ function Header() {
   }, []);
 
   return (
-    <div ref={headerRef} className=" z-40 fixed w-screen  top-0 left-0  transition-all p-6  ">
+    <div ref={headerRef} className="header_container z-40 fixed w-screen  top-0 left-0  transition-all p-6  ">
       <div className="container mx-auto">
         <header className="  flex justify-between items-center text-white ">
           {menuIsOpen && (
