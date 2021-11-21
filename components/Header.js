@@ -49,10 +49,10 @@ function Header() {
   return (
     <div
       ref={headerRef}
-      className="header_container z-40 fixed w-screen  top-0 left-0  transition-all p-6  "
+      className="header_container z-40 fixed w-screen  top-0 left-0  transition-all "
     >
       <div className="container mx-auto">
-        <header className="  flex justify-between items-center text-white ">
+        <header className="  flex p-6 justify-between items-center text-white ">
           {menuIsOpen && <NavMenu setMenuIsOpen={setMenuIsOpen} />}
           {/* right side */}
           <div className="header_logo flex items-center space-x-5">
