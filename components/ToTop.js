@@ -20,7 +20,7 @@ const componentRef = useRef(null)
           
     }, [])
     return (
-        <div ref = {componentRef}  className="hidden fixed bottom-5 right-5 rounded-full cursor-pointer bg-primary" onClick = {goToTop}>
+        <div ref = {componentRef}  className="hidden fixed z-50 bottom-5 right-5 rounded-full cursor-pointer bg-primary" onClick = {goToTop}>
             <ArrowCircleUpIcon className="h-10  text-primary bg-white border border-gray-300 rounded-full w-full" />
         </div>
     )
