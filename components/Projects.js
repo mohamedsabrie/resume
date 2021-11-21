@@ -1,5 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect } from "react";
+import gsap from 'gsap'
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+
 const projects = [
   {
     id: 1,
@@ -61,6 +66,29 @@ const projects = [
 ];
 
 export default function Projects() {
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    let proxy = { skew: 0 },
+    skewSetter = gsap.quickSetter(".skewElem", "skewY", "deg"), // fast
+    clamp = gsap.utils.clamp(-20, 20); // don't let the skew go beyond 20 degrees. 
+
+ScrollTrigger.create({
+  onUpdate: (self) => {
+    let skew = clamp(self.getVelocity() / -300);
+    // only do something if the skew is MORE severe. Remember, we're always tweening back to 0, so if the user slows their scrolling quickly, it's more natural to just let the tween handle that smoothly rather than jumping to the smaller skew.
+    if (Math.abs(skew) > Math.abs(proxy.skew)) {
+      proxy.skew = skew;
+      gsap.to(proxy, {skew: 0, duration: 0.8, ease: "power3", overwrite: true, onUpdate: () => skewSetter(proxy.skew)});
+    }
+  }
+});
+
+// make the right edge "stick" to the scroll bar. force3D: true improves performance
+gsap.set(".skewElem", {transformOrigin: "right center", force3D: true});
+    
+  }, [])
   return (
     <div id="projects" className="py-20 bg-white">
       <div className="text-4xl text-center mb-5 ">
@@ -71,7 +99,7 @@ export default function Projects() {
           <Link href={href} key={id}>
             <a
               target="_blank"
-              className="flex flex-col items-center justify-center border border-gray-300 my-5 p-5 shadow- transition duration-500 ease-out hover:shadow-2xl cursor-pointer rounded-lg "
+              className="skewElem flex flex-col items-center justify-center border border-gray-300 my-5 p-5 shadow- transition duration-500 ease-out hover:shadow-2xl cursor-pointer rounded-lg "
             >
               <Image
                 className="h-20 w-20 p-2 border border-gray-300 "

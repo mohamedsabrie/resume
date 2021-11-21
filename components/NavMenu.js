@@ -23,8 +23,7 @@ function NavMenu({ setMenuIsOpen }) {
       duration: 0.5,
       x: "100%",
       opacity: 0,
-    })
-    
+    });
   }, []);
   return (
     <div className=" nav_menu fixed top-0 left-0 z-50 bg-primary h-screen w-screen">
@@ -39,7 +38,6 @@ function NavMenu({ setMenuIsOpen }) {
             to="home"
             className="headerLink"
             spy={true}
-            offset={-63}
             smooth={true}
             duration={500}
           >
@@ -52,7 +50,6 @@ function NavMenu({ setMenuIsOpen }) {
             to="about"
             className="headerLink"
             spy={true}
-            offset={-63}
             smooth={true}
             duration={500}
           >
@@ -65,7 +62,6 @@ function NavMenu({ setMenuIsOpen }) {
             to="projects"
             className="headerLink"
             spy={true}
-            offset={-63}
             smooth={true}
             duration={500}
           >
@@ -78,7 +74,6 @@ function NavMenu({ setMenuIsOpen }) {
             to="contact"
             className="headerLink"
             spy={true}
-            offset={-63}
             smooth={true}
             duration={500}
           >
