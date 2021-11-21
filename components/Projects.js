@@ -18,7 +18,7 @@ const projects = [
   {
     id: 3,
     name: "Amazon Clone",
-    href: "https://vercel.com/mohamedsabrie/amazon-clone",
+    href: "https://amazon-clone-chi-livid.vercel.app/",
     imageSrc: "/images/amazon-clone.jpg",
     imageAlt: "Anmazon image",
   },
@@ -39,7 +39,7 @@ const projects = [
   {
     id: 6,
     name: "Facebook Clone",
-    href: "https://facebook-clone-iota.vercel.app/",
+    href: "https://fb-clone-iota.vercel.app/",
     imageSrc: "/images/facebook-clone.png",
     imageAlt: "facebook image",
   },
