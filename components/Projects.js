@@ -41,13 +41,7 @@ const projects = [
     imageSrc: "/images/google-clone.png",
     imageAlt: "google image",
   },
-  {
-    id: 6,
-    name: "Facebook Clone",
-    href: "https://fb-clone-iota.vercel.app/",
-    imageSrc: "/images/facebook-clone.png",
-    imageAlt: "facebook image",
-  },
+ 
   {
     id: 7,
     name: "Whatsapp Clone",
