@@ -4,7 +4,7 @@ import Contact from "../components/Contact";
 import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 import Projects from "../components/Projects";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import gsap from 'gsap'
 import ToTop from "../components/ToTop";
 import Footer from "../components/Footer";
@@ -14,7 +14,7 @@ export default function Home() {
   
   // Initialise
   
-  useEffect(() => {
+  useLayoutEffect(() => {
 
     
   const t1 = gsap.timeline();
