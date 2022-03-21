@@ -7,6 +7,20 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const projects = [
   {
+    id: 0,
+    name: "AKOIN website",
+    href: "https://www.akoin.io/",
+    imageSrc: "/images/akoin.jpg",
+    imageAlt: "akoin-logo",
+  },
+  {
+    id: 9,
+    name: "CRYPTERNS website",
+    href: "https://www.crypterns.com",
+    imageSrc: "/images/cryptern-logo.svg",
+    imageAlt: "cryptern-logo",
+  },
+  {
     id: 1,
     name: "Hulu Clone",
     href: "https://hulu-clone-omega-six.vercel.app/",
@@ -96,7 +110,7 @@ gsap.set(".skewElem", {transformOrigin: "right center", force3D: true});
               className="skewElem flex flex-col items-center justify-center border border-gray-300 my-5 p-5 shadow- transition duration-500 ease-out hover:shadow-2xl cursor-pointer rounded-lg "
             >
               <Image
-                className="h-20 w-20 p-2 border border-gray-300 "
+                className="h-20 w-20 p-2 border border-gray-300 rounded-lg "
                 src={imageSrc}
                 height={200}
                 width={200}
