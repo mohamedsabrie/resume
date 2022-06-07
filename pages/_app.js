@@ -1,18 +1,30 @@
 import "../styles/globals.css";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Head>
-        <title>Mohamed Sabry Resume | Front End Developer</title>
-        <meta name="keywords" content="Front, React, Next" />
-        <meta
-          name="description"
-          content=" I am a Front End developer with industry experience building websites and web apps. I specialize in JavaScript and have professional experience working with React.js,
-          Next.js, and Tailwind.css. I also have experience working with Redux, TypeScript, and Firebase"
-        />
-      </Head>
+        <NextSeo
+        title="Mohamed Sabry"
+        titleTemplate="Mohamed Sabry"
+        defaultTitle="Mohamed Sabry"
+        description="A front end web developer, who loves to develop beautiful websites and web apps . I have been coding for over a year now. I am professional using react.js-next.js "
+        canonical="https://mohamed-sabry-portfolio.vercel.app/"
+        openGraph={{
+          url: "https://mohamed-sabry-portfolio.vercel.app/",
+          title: "Mohamed Sabry",
+          description: "A front end web developer, who loves to develop beautiful websites and web apps . I have been coding for over a year now. I am professional using react.js-next.js ",
+          images: [
+            {
+              url: "/og-image.webp",
+              width: 800,
+              height: 420,
+              alt: "Mohamed Sabry",
+            },
+          ],
+        }}
+       
+      />
       <Component {...pageProps} />
     </>
   );
