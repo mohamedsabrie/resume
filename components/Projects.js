@@ -105,16 +105,16 @@ gsap.set(".skewElem", {transformOrigin: "right center", force3D: true});
     
   }, [])
   return (
-    <div id="projects" className="py-20 bg-white">
-      <div className="text-4xl text-center mb-5 ">
-        <span className="pb-3 border-b-2 border-gray-400">Projects</span>
+    <div id="projects" className="py-20 bg-$green">
+      <div className="text-3xl font-bold md:text-5xl text-center mb-5 ">
+        <span className=" border-b-2 border-$black2">Projects</span>
       </div>
       <div className="flex items-center justify-around  max-w-6xl mx-auto flex-wrap">
         {projects.map(({ imageSrc, name, id, href, imageAlt }) => (
           <Link href={href} key={id}>
             <a
               target="_blank"
-              className="skewElem flex flex-col items-center justify-center border border-gray-300 my-5 p-5 shadow- transition duration-500 ease-out hover:shadow-2xl cursor-pointer rounded-lg "
+              className="skewElem shadow-2xl flex flex-col items-center justify-center border-2 bg-white border-$black2 my-5 p-5  transition transform duration-500 ease-out hover:rotate-45 cursor-pointer rounded-lg "
             >
               <Image
                 className="h-20 w-20 p-2 border border-gray-300 rounded-lg object-contain  "

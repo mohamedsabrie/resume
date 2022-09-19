@@ -1,41 +1,62 @@
+import { MailIcon } from "@heroicons/react/solid";
 import { Link } from "react-scroll";
+import { SocialIcon } from "react-social-icons";
 
 function HeroSection() {
+  const socials = [
+    {
+      id: 1,
+      name: "Linkedin",
+      href: "https://www.linkedin.com/in/mohamedsabry3/",
+    },
+    {
+      id: 2,
+      name: "Github",
+      href: "https://github.com/mohamedsabrie",
+      icon: "/images/airbnb-clone.png",
+    },
+
+    // More products...
+  ];
   return (
-    <div id="home" className="bg-hero-background bg-cover bg-center  relative ">
-      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-70" />
+    <div id="about" className="bg-$yellow  bg-center  relative ">
       <div
-        className={`container relative flex   items-center justify-center h-screen`}
+        className={`px-5 md:px-10 xl:px-20  relative flex flex-col md:flex-row justify-center md:justify-between gap-5  items-center betwee h-screen`}
       >
-        <div>
-          <div className="text-center text-white">
-            <h3 className="text-3xl md:text-4xl lg:text-5xl  ">
-              <span className="name inline-block mb-3"> Mohamed Sabry </span>
-              <br />
-              <span className="job_title inline-block">
-                Front End Developer | React.js
-              </span>
-            </h3>
-          </div>
-          <div className="hero_buttons flex flex-col sm:flex-row  justify-center items-center space-y-8 sm:space-y-0 sm:space-x-8 mt-10">
-            <Link
-              to="about"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className=" bg-gray-200 hover:bg-gray-300 text-center w-40 px-8 py-3 rounded-md text-lg font-semibold cursor-pointer   transition-all duration-500"
-            >
-              About me
-            </Link>
-            <Link
-              to="projects"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className=" bg-primary hover:bg-green-600  text-center text-white w-40 px-8 py-3 rounded-md text-lg font-semibold cursor-pointer   transition-all duration-500"
-            >
-              Projects
-            </Link>
+        <div className="md:mt-20 order-2 md:order-1 ">
+          <h3 className=" text-center md:text-left ">
+            <span className="name inline-block mb-3 font-extrabold text-$black1 text-2xl lg:text-3xl">
+              {" "}
+              Hello,{" "}
+            </span>
+            <br />
+            <span className="name inline-block mb-3 font-extrabold text-$black1 text-2xl lg:text-3xl">
+              {" "}
+              I&#700;m Mohamed{" "}
+            </span>
+            <br />
+            <span className="job_title inline-block font-semibold text-$black2  lg:text-2xl">
+              Front End Developer | React.js
+            </span>
+          </h3>
+        </div>
+        <div className="mt-20 order-1 md:order-2 flex flex-col  md:flex-row items-center gap-10 md:gap-20">
+          <img
+            className="h-[275px] md:h-[300px] xl:h-[500px] transition duration-200 hover:rotate-2 "
+            src="/svgs/hero_img.svg"
+            alt=""
+          />
+          <div className="flex space-x-5 md:flex-col md:space-y-5 md:space-x-0 justify-between items-center pb-5">
+            {socials.map(({ href, name, id }) => (
+              <div key={id} className=" ">
+                <SocialIcon url={href} fgColor="#000" bgColor="#FFF" />
+              </div>
+            ))}
+            <div className="bg-white p-2 rounded-full">
+              <a href="mailto:abosaadmohamed@gmail.com">
+                <MailIcon className="h-8 text-black " />
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -32,7 +32,7 @@ function NavMenu({ setMenuIsOpen }) {
         onClick={handleCloseMenu}
       />
       <ul className="  flex flex-col h-screen items-center justify-center space-y-10 text-3xl ">
-        <li>
+        {/* <li>
           <Link
             onClick={handleCloseMenu}
             to="home"
@@ -43,7 +43,7 @@ function NavMenu({ setMenuIsOpen }) {
           >
             Home
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link
             onClick={handleCloseMenu}
@@ -64,11 +64,12 @@ function NavMenu({ setMenuIsOpen }) {
             spy={true}
             smooth={true}
             duration={500}
+            offset = {-50}
           >
             Projects
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             onClick={handleCloseMenu}
             to="contact"
@@ -79,7 +80,7 @@ function NavMenu({ setMenuIsOpen }) {
           >
             Contact
           </Link>
-        </li>
+        </li> */}
       </ul>
     </div>
   );

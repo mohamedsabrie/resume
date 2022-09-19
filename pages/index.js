@@ -70,9 +70,8 @@ export default function Home() {
       <Header />
       <div>
         <HeroSection />
-        <About />
         <Projects />
-        <Contact />
+        {/* <Contact /> */}
         <Footer />
 
         <ToTop />
