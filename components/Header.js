@@ -5,40 +5,15 @@ import { MenuIcon } from "@heroicons/react/outline";
 import NavMenu from "./NavMenu";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useRouter } from "next/dist/client/router";
 
-function Header() {
+function Header({active}) {
   const headerRef = useRef(null);
   const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const router=  useRouter();
   gsap.registerPlugin(ScrollTrigger);
 
-  useEffect(() => {
-   
-    // const showAnim = gsap
-    //   .from(".header_container", {
-    //     yPercent: -100,
-    //     paused: true,
-    //     duration: 0.2,
-    //   })
-    //   .progress(1);
-
-    // ScrollTrigger.create({
-    //   start: "top top",
-    //   end: 99999,
-    //   onUpdate: (self) => {
-    //     self.direction === -1 ? showAnim.play() : showAnim.reverse();
-    //   },
-    // });
-
-    const headerLinks = document.querySelectorAll("ul li");
-    headerLinks.forEach((link) => {
-      link.addEventListener("mouseleave", () => {
-        link.classList.add("animate_out");
-        setTimeout(() => {
-          link.classList.remove("animate_out");
-        }, 300);
-      });
-    });
-  }, []);
+  
 
   return (
     <div
@@ -47,10 +22,10 @@ function Header() {
     >
       <div className="container mx-auto">
         <header className="  flex p-6 justify-between items-center text-white ">
-          {menuIsOpen && <NavMenu setMenuIsOpen={setMenuIsOpen} />}
+          {menuIsOpen && <NavMenu active={active} setMenuIsOpen={setMenuIsOpen} />}
           {/* right side */}
           <div className="">
-            <h2 className="font-bold text-2xl">Mo.Sabry</h2>
+            <h2 className="font-bold text-2xl cursor-pointer" onClick={() => router.push("/")}>Mo.Sabry</h2>
           </div>
 
           {/* left side */}
@@ -62,41 +37,16 @@ function Header() {
           </div>
           <nav className="hidden sm:inline-flex">
             <ul className="space-x-8 text-lg flex font-semibold">
-              <li>
-                <Link
-                  to="about"
-                  className="headerLink"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                >
-                  About
-                </Link>
+              <li className={` ${active == 1  && "border px-2"} `}>
+                <a className="cursor-pointer " onClick={() => router.push("/") }>About</a>
               </li>
-              <li>
-                <Link
-                  to="projects"
-                  className="headerLink"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  offset= {-50}
-                  
-                >
-                  Projects
-                </Link>
+              <li className={` ${active == 2  && "border px-2"} `}>
+                <a className="cursor-pointer" onClick={() => router.push("/projects") }>Projects</a>
               </li>
-              {/* <li>
-                <Link
-                  to="contact"
-                  className="headerLink"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                >
-                  Contact
-                </Link>
-              </li> */}
+              <li className={` ${active == 3  && "border px-2"} `}>
+                <a className="cursor-pointer" onClick={() => router.push("/experience") }>Experience</a>
+              </li>
+              
             </ul>
           </nav>
         </header>

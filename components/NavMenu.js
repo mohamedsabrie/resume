@@ -1,9 +1,11 @@
 import { XIcon } from "@heroicons/react/outline";
 import gsap from "gsap";
+import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { Link } from "react-scroll";
 
-function NavMenu({ setMenuIsOpen }) {
+function NavMenu({ setMenuIsOpen, active }) {
+  const router = useRouter();
   const handleCloseMenu = () => {
     setMenuIsOpen(false);
     console.log("close menu");
@@ -32,55 +34,27 @@ function NavMenu({ setMenuIsOpen }) {
         onClick={handleCloseMenu}
       />
       <ul className="  flex flex-col h-screen items-center justify-center space-y-10 text-3xl ">
-        {/* <li>
-          <Link
-            onClick={handleCloseMenu}
-            to="home"
-            className="headerLink"
-            spy={true}
-            smooth={true}
-            duration={500}
-          >
-            Home
-          </Link>
-        </li> */}
-        <li>
-          <Link
-            onClick={handleCloseMenu}
-            to="about"
-            className="headerLink"
-            spy={true}
-            smooth={true}
-            duration={500}
-          >
+        <li className={` ${active == 1 && "border px-2"} `}>
+          <a className="cursor-pointer " onClick={() => router.push("/")}>
             About
-          </Link>
+          </a>
         </li>
-        <li>
-          <Link
-            onClick={handleCloseMenu}
-            to="projects"
-            className="headerLink"
-            spy={true}
-            smooth={true}
-            duration={500}
-            offset = {-50}
+        <li className={` ${active == 2 && "border px-2"} `}>
+          <a
+            className="cursor-pointer"
+            onClick={() => router.push("/projects")}
           >
             Projects
-          </Link>
+          </a>
         </li>
-        {/* <li>
-          <Link
-            onClick={handleCloseMenu}
-            to="contact"
-            className="headerLink"
-            spy={true}
-            smooth={true}
-            duration={500}
+        <li className={` ${active == 3 && "border px-2"} `}>
+          <a
+            className="cursor-pointer"
+            onClick={() => router.push("/experience")}
           >
-            Contact
-          </Link>
-        </li> */}
+            Experience
+          </a>
+        </li>
       </ul>
     </div>
   );

@@ -28,28 +28,8 @@
   *{
     user-select: none;
   }
-  ul li{
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 3px;
+  .btn{
+    @apply bg-black px-5 py-2 text-white font-bold rounded-lg 
   }
-  ul li::after{
-    content: "";
-    height: 2px;
-    width: 100%;
-    position: absolute;
-    bottom:0;
-    left: -100%;
-    background-color: #FFF;
-
-  }
-  ul li:hover::after{
-    left: 0;
-    transition: all 0.3s ease-out;
-  }
-  ul .animate_out::after{
-     left: 100%;
-     transition: all 0.3s ease-out;
-
-  }
+  
 }

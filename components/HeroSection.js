@@ -40,10 +40,18 @@ function HeroSection() {
               Front End Developer | React.js
             </span>
           </h3>
+          <div className="mt-10">
+            <button className="btn"> <a href="/mohamed-sabry-frontend-cv.pdf" download>Download CV</a></button>
+          </div>
         </div>
         <div className="order-1 md:order-2 flex flex-col  md:flex-row items-center gap-10 md:gap-20">
           <div className="relative w-[200px] h-[300px] md:w-[300px] md:h-[500px] lg:w-[500px] lg:h-[500px]  transition duration-200 hover:rotate-2 ">
-            <Image className="w-full h-full" src="/svgs/hero_img.svg" alt="" layout="fill" />
+            <Image
+              className="w-full h-full"
+              src="/svgs/hero_img.svg"
+              alt=""
+              layout="fill"
+            />
           </div>
 
           <div className="flex space-x-5 md:flex-col md:space-y-5 md:space-x-0 justify-between items-center pb-5">

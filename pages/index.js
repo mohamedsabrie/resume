@@ -1,12 +1,8 @@
 import Head from "next/head";
-import About from "../components/About";
-import Contact from "../components/Contact";
+
 import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
-import Projects from "../components/Projects";
-import { useEffect, useLayoutEffect } from "react";
 import gsap from 'gsap'
-import ToTop from "../components/ToTop";
 import Footer from "../components/Footer";
 
 
@@ -67,14 +63,10 @@ export default function Home() {
 
   return (
     <div>
-      <Header />
+      <Header active={1} />
       <div>
         <HeroSection />
-        <Projects />
-        {/* <Contact /> */}
         <Footer />
-
-        <ToTop />
       </div>
     </div>
   );
