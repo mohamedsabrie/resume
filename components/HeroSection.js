@@ -40,7 +40,7 @@ function HeroSection() {
               Front End Developer | React.js
             </span>
           </h3>
-          <div className="mt-10">
+          <div className="mt-10 text-center md:text-left">
             <button className="btn"> <a href="/mohamed-sabry-frontend-cv.pdf" download>Download CV</a></button>
           </div>
         </div>
