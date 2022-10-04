@@ -28,7 +28,7 @@ function NavMenu({ setMenuIsOpen, active }) {
     });
   }, []);
   return (
-    <div className=" nav_menu fixed top-0 left-0 z-50 bg-primary h-screen w-screen">
+    <div className=" nav_menu fixed top-0 left-0 z-50 bg-black h-screen w-screen">
       <XIcon
         className="h-8 text-white absolute  top-10 right-10 cursor-pointer transition hover:scale-125"
         onClick={handleCloseMenu}
