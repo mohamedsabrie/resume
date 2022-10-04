@@ -1,15 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Header from "../Header";
-import Footer from "../Footer";
+import Slide from "react-reveal/Slide";
+import Zoom from "react-reveal/Zoom";
 
 const projects = [
   {
     id: 908,
-    name: "MAD DAWGS Web App",
+    name: "MAD DAWGS ",
     href: "https://maddawgs-nft.vercel.app/",
     imageSrc: "/images/mad-dawgs-logo.png",
     imageAlt: "mad_dawgs-logo",
@@ -82,57 +79,36 @@ const projects = [
 ];
 
 export default function Projects() {
-  gsap.registerPlugin(ScrollTrigger);
-
-  useEffect(() => {
-    let proxy = { skew: 0 },
-      skewSetter = gsap.quickSetter(".skewElem", "skewY", "deg"), // fast
-      clamp = gsap.utils.clamp(-20, 20); // don't let the skew go beyond 20 degrees.
-
-    ScrollTrigger.create({
-      onUpdate: (self) => {
-        let skew = clamp(self.getVelocity() / -300);
-        // only do something if the skew is MORE severe. Remember, we're always tweening back to 0, so if the user slows their scrolling quickly, it's more natural to just let the tween handle that smoothly rather than jumping to the smaller skew.
-        if (Math.abs(skew) > Math.abs(proxy.skew)) {
-          proxy.skew = skew;
-          gsap.to(proxy, {
-            skew: 0,
-            duration: 0.8,
-            ease: "power3",
-            overwrite: true,
-            onUpdate: () => skewSetter(proxy.skew),
-          });
-        }
-      },
-    });
-
-    // make the right edge "stick" to the scroll bar. force3D: true improves performance
-    gsap.set(".skewElem", { transformOrigin: "right center", force3D: true });
-  }, []);
   return (
-      <div id="projects" className="py-20 mt-10 bg-$green">
-        <div className="text-3xl font-bold md:text-5xl text-center mb-5 ">
-          <span className=" border-b-2 border-$black2">Projects</span>
-        </div>
+    <div id="projects" className="py-20 mt-10 bg-$green">
+      <Slide bottom>
+      <div className="text-3xl font-bold md:text-5xl text-center mb-5 ">
+        <span className=" border-b-2 border-$black2">Projects</span>
+      </div>
+      </Slide>
+      <Zoom left cascade>
         <div className="flex items-center justify-around  max-w-6xl mx-auto flex-wrap">
           {projects.map(({ imageSrc, name, id, href, imageAlt }) => (
-            <Link href={href} key={id}>
-              <a
-                target="_blank"
-                className="skewElem shadow-2xl flex flex-col items-center justify-center border-2 bg-white border-$black2 my-5 p-5  transition transform duration-500 ease-out hover:rotate-45 cursor-pointer rounded-lg "
-              >
-                <Image
-                  className="h-20 w-20 p-2 border border-gray-300 rounded-lg object-contain  "
-                  src={imageSrc}
-                  height={200}
-                  width={200}
-                  alt={imageAlt}
-                />
-                <p className="mt-3 text-xl">{name}</p>
-              </a>
-            </Link>
+            <div key={id}>
+              <Link href={href}>
+                <a
+                  target="_blank"
+                  className="skewElem shadow-2xl flex flex-col items-center justify-center border-2 bg-white border-$black2 my-5 p-5  transition transform duration-500 ease-out  cursor-pointer rounded-lg "
+                >
+                  <Image
+                    className="h-20 w-20 p-2 border border-gray-300 rounded-lg object-contain  "
+                    src={imageSrc}
+                    height={200}
+                    width={200}
+                    alt={imageAlt}
+                  />
+                  <p className="mt-3 text-xl">{name}</p>
+                </a>
+              </Link>
+            </div>
           ))}
         </div>
-      </div>
+      </Zoom>
+    </div>
   );
 }
