@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
           description: "A front end web developer, who loves to develop beautiful websites and web apps . I have been coding for over a year now. I am professional using react.js-next.js ",
           images: [
             {
-              url: "/og-image.webp",
+              url: "/svgs/hero_img.svg",
               width: 800,
               height: 420,
               alt: "Mohamed Sabry",
