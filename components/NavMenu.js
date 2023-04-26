@@ -47,14 +47,6 @@ function NavMenu({ setMenuIsOpen, active }) {
             Projects
           </a>
         </li>
-        <li className={` ${active == 3 && "border px-2"} `}>
-          <a
-            className="cursor-pointer"
-            onClick={() => router.push("/experience")}
-          >
-            Experience
-          </a>
-        </li>
       </ul>
     </div>
   );
