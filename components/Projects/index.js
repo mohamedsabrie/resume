@@ -5,7 +5,28 @@ import Zoom from "react-reveal/Zoom";
 
 const projects = [
   {
+    id: 907,
+    name: "Entaleq",
+    href: "https://entaleq-staging.xapprika.com/",
+    imageSrc: "/svgs/entaleq-logo.svg",
+    imageAlt: "entaleq-logo",
+  },
+  {
     id: 908,
+    name: "Lath",
+    href: "https://lath.me/",
+    imageSrc: "/svgs/lath-logo.svg",
+    imageAlt: "lath-logo",
+  },
+  {
+    id: 589,
+    name: "Khatwa",
+    href: "https://platform.khatwacareers.com/",
+    imageSrc: "/images/khatwa-logo.png",
+    imageAlt: "khatwa-logo",
+  },
+  {
+    id: 123,
     name: "MAD DAWGS ",
     href: "https://maddawgs-nft.vercel.app/",
     imageSrc: "/images/mad-dawgs-logo.png",
@@ -18,63 +39,7 @@ const projects = [
     imageSrc: "/images/akoin.jpg",
     imageAlt: "akoin-logo",
   },
-  {
-    id: 9,
-    name: "CRYPTERNS website",
-    href: "https://www.crypterns.com",
-    imageSrc: "/images/cryptern-logo.svg",
-    imageAlt: "cryptern-logo",
-  },
-  {
-    id: 1,
-    name: "Hulu Clone",
-    href: "https://hulu-clone-omega-six.vercel.app/",
-    imageSrc: "/images/hulu-clone.png",
-    imageAlt: "hulu image",
-  },
-  {
-    id: 2,
-    name: "Airbnb Clone",
-    href: "https://airbnb-clone-silk.vercel.app/",
-    imageSrc: "/images/airbnb-clone.png",
-    imageAlt: "airbnb image",
-  },
-  {
-    id: 3,
-    name: "Amazon Clone",
-    href: "https://amazon-clone-chi-livid.vercel.app/",
-    imageSrc: "/images/amazon-clone.jpg",
-    imageAlt: "Anmazon image",
-  },
-  {
-    id: 4,
-    name: "Google Docs Clone",
-    href: "https://google-docs-clone-g4kictox6-mohamedsabrie.vercel.app/",
-    imageSrc: "/images/google-docs-clone.png",
-    imageAlt: "google-docs image",
-  },
-  {
-    id: 5,
-    name: "Google Clone",
-    href: "https://google-clone-kappa-gilt.vercel.app/",
-    imageSrc: "/images/google-clone.png",
-    imageAlt: "google image",
-  },
 
-  {
-    id: 7,
-    name: "Whatsapp Clone",
-    href: "https://whatsapp-2-mohamedsabrie.vercel.app/",
-    imageSrc: "/images/whatsapp-clone.png",
-    imageAlt: "Whatsapp image",
-  },
-  {
-    id: 8,
-    name: "Slack Clone",
-    href: "https://slack-clone-46dc4.web.app/",
-    imageSrc: "/images/slack-clone.png",
-    imageAlt: "Slack image",
-  },
   // More products...
 ];
 

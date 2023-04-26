@@ -43,9 +43,7 @@ function Header({active}) {
               <li className={` ${active == 2  && "border px-2"} `}>
                 <a className="cursor-pointer" onClick={() => router.push("/projects") }>Projects</a>
               </li>
-              <li className={` ${active == 3  && "border px-2"} `}>
-                <a className="cursor-pointer" onClick={() => router.push("/experience") }>Experience</a>
-              </li>
+           
               
             </ul>
           </nav>

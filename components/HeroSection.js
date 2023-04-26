@@ -51,7 +51,7 @@ function HeroSection() {
             <Fade bottom>
               <button className="btn">
                 {" "}
-                <a href="/mohamed-sabry-frontend-cv.pdf" download>
+                <a href="/mohamed-sabry-cv.pdf" download>
                   Download CV
                 </a>
               </button>
