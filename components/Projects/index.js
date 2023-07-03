@@ -7,7 +7,7 @@ const projects = [
   {
     id: 907,
     name: "Entaleq",
-    href: "https://entaleq-staging.xapprika.com/",
+    href: "https://platform.entaleqapp.com/",
     imageSrc: "/svgs/entaleq-logo.svg",
     imageAlt: "entaleq-logo",
   },
