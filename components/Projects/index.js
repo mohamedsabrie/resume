@@ -14,7 +14,7 @@ const projects = [
   {
     id: 908,
     name: "Lath",
-    href: "https://lath.me/",
+    href: "https://lath.com.sa/",
     imageSrc: "/svgs/lath-logo.svg",
     imageAlt: "lath-logo",
   },
