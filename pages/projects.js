@@ -7,8 +7,10 @@ function ProjectsPage() {
   return (
     <div>
       <Header active={2} />
-      <Projects />
-      <Footer />
+      <div>
+        <Projects />
+        <Footer />
+      </div>
     </div>
   );
 }
