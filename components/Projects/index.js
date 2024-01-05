@@ -21,7 +21,7 @@ const projects = [
   {
     id: 4,
     name: "Khatwa",
-    href: "https://platform.khatwacareers.com/",
+    href: "https://khatwacareers.com/",
     imageSrc: "/images/khatwa-logo.png",
     imageAlt: "khatwa-logo",
   },
