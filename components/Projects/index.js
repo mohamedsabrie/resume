@@ -6,7 +6,7 @@ import Zoom from "react-reveal/Zoom";
 const projects = [
   {
     id: 1,
-    name: "GDD GAZA",
+    name: "GDD Gaza",
     href: "https://gdd.org/gaza",
     imageSrc: "/images/gdd.svg",
     imageAlt: "gdd-logo",
@@ -27,9 +27,9 @@ const projects = [
   },
   {
     id: 4,
-    name: "Khatwa",
-    href: "https://khatwacareers.com/",
-    imageSrc: "/images/khatwa-logo.png",
+    name: "Helm Recruitment",
+    href: "https://recruitment.helmegypt.org/",
+    imageSrc: "/images/helm.png",
     imageAlt: "khatwa-logo",
   },
   {
@@ -41,7 +41,7 @@ const projects = [
   },
   {
     id: 6,
-    name: "AKOIN website",
+    name: "AKOIN",
     href: "https://www.akoin.io/",
     imageSrc: "/images/akoin.jpg",
     imageAlt: "akoin-logo",
