@@ -18,13 +18,13 @@ const projects = [
     imageSrc: "/images/sahm-logo.svg",
     imageAlt: "entaleq-logo",
   },
-  {
-    id: 3,
-    name: "Lath",
-    href: "https://lath.com.sa/",
-    imageSrc: "/svgs/lath-logo.svg",
-    imageAlt: "lath-logo",
-  },
+  // {
+  //   id: 3,
+  //   name: "Lath",
+  //   href: "https://lath.com.sa/",
+  //   imageSrc: "/svgs/lath-logo.svg",
+  //   imageAlt: "lath-logo",
+  // },
   {
     id: 4,
     name: "Helm Recruitment",
