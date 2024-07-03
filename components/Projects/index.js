@@ -1,7 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import Slide from "react-reveal/Slide";
-import Zoom from "react-reveal/Zoom";
 
 const projects = [
   {
@@ -18,13 +16,11 @@ const projects = [
     imageSrc: "/images/sahm-logo.svg",
     imageAlt: "entaleq-logo",
   },
-  // {
-  //   id: 3,
-  //   name: "Lath",
-  //   href: "https://lath.com.sa/",
-  //   imageSrc: "/svgs/lath-logo.svg",
-  //   imageAlt: "lath-logo",
-  // },
+  {
+    id: 3,
+    name: "ShaperAid",
+    href: "https://shaperaid.vercel.app/",
+  },
   {
     id: 4,
     name: "Helm Recruitment",
@@ -53,34 +49,32 @@ const projects = [
 export default function Projects() {
   return (
     <div id="projects" className="py-20 mt-10 bg-$green min-h-screen">
-      <Slide bottom>
-        <div className="text-3xl font-bold md:text-5xl text-center mb-5 ">
-          <span className=" border-b-2 border-$black2">Projects</span>
-        </div>
-      </Slide>
-      <Zoom left cascade>
-        <div className="flex items-center justify-around  max-w-6xl mx-auto flex-wrap">
-          {projects.map(({ imageSrc, name, id, href, imageAlt }) => (
-            <div key={id}>
-              <Link legacyBehavior href={href}>
-                <a
-                  target="_blank"
-                  className="skewElem shadow-2xl flex flex-col items-center justify-center border-2 bg-white border-$black2 my-5 p-5  transition transform duration-500 ease-out  cursor-pointer rounded-lg "
-                >
+      <div className="text-3xl font-bold md:text-5xl text-center mb-5 ">
+        <span className=" border-b-2 border-$black2">Projects</span>
+      </div>
+      <div className="flex items-center gap-x-2 justify-around  max-w-6xl mx-auto flex-wrap">
+        {projects.map(({ imageSrc, name, id, href, imageAlt }) => (
+          <div key={id}>
+            <Link legacyBehavior href={href}>
+              <a
+                target="_blank"
+                className="skewElem shadow-2xl flex flex-col items-center justify-center border-2 p-5 bg-white border-$black2 my-5   transition transform duration-500 ease-out  cursor-pointer rounded-lg "
+              >
+                {imageSrc ? (
                   <Image
-                    className="h-[200px] p-2 border border-gray-300 rounded-lg object-contain  "
+                    className="h-[200px]  rounded-lg object-contain  "
                     src={imageSrc}
                     height={200}
                     width={200}
                     alt={imageAlt}
                   />
-                  <p className="mt-3 text-xl">{name}</p>
-                </a>
-              </Link>
-            </div>
-          ))}
-        </div>
-      </Zoom>
+                ) : <p className="h-[200px] w-[200px] flex items-center justify-center text-3xl font-semibold">{name}</p>}
+
+              </a>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

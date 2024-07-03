@@ -22,16 +22,22 @@ module.exports = {
         $black2: "#474A57",
         $black: "#000",
         $green: "#00C6AE",
-       
-        
-        
-        
       },
       backgroundImage: (theme) => ({
         "hero-background": "url('/hero-background.jpg')",
         "contact-bg": "url('/contact-bg.png')",
         "about-bg": "url('/images/about.jpg')",
       }),
+      animation: {
+        fade: "fadeIn .3s ease-in-out",
+      },
+
+      keyframes: {
+        fadeIn: {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
+      },
     },
   },
   variants: {

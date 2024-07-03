@@ -1,17 +1,12 @@
-import { Link } from "react-scroll";
-import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
+import { useRef, useState } from "react";
 import { MenuIcon } from "@heroicons/react/outline";
 import NavMenu from "./NavMenu";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useRouter } from "next/dist/client/router";
 
 function Header({active}) {
   const headerRef = useRef(null);
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const router=  useRouter();
-  gsap.registerPlugin(ScrollTrigger);
 
   
 
