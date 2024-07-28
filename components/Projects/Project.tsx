@@ -1,11 +1,15 @@
 import { EyeIcon } from "@heroicons/react/solid";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 function Project({ imageSrc, name, id, href, imageAlt }) {
   return (
-    <div className="">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="   rounded-lg overflow-hidden ">
         <a
           href={href}
@@ -30,7 +34,7 @@ function Project({ imageSrc, name, id, href, imageAlt }) {
       <h3 className="text-center mt-2 text-lg sm:text-2xl text-white font-semibold">
         {name}
       </h3>
-    </div>
+    </motion.div>
   );
 }
 

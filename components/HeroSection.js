@@ -1,7 +1,7 @@
 import { MailIcon } from "@heroicons/react/solid";
 import { SocialIcon } from "react-social-icons";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 
 function HeroSection() {
   const socials = [
@@ -33,11 +33,11 @@ function HeroSection() {
 
             <p className="name mb-3 font-extrabold text-$black1 text-2xl lg:text-3xl">
               {" "}
-              I&#700;m Mohamed{" "}
+              I&#700;m Mohamed Sabry
             </p>
 
             <p className="job_title font-semibold text-$black2  lg:text-2xl">
-              Front End Developer | React.js
+              Frontend Developer | React JS | Next JS
             </p>
           </div>
           <div className="mt-10 text-center md:text-left">
@@ -50,14 +50,19 @@ function HeroSection() {
           </div>
         </div>
         <div className="order-1 md:order-2 flex flex-col  md:flex-row items-center gap-5 sm:gap-10 md:gap-20">
-          <div className="relative w-[200px] h-[300px] md:w-[300px] md:h-[500px] lg:w-[500px] lg:h-[500px]  transition duration-200 hover:rotate-2 ">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="relative w-[200px] h-[300px] md:w-[300px] md:h-[500px] lg:w-[500px] lg:h-[500px]  transition duration-200 hover:rotate-2 "
+          >
             <Image
               className="w-full h-full"
               src="/svgs/hero_img.svg"
               alt=""
               layout="fill"
             />
-          </div>
+          </motion.div>
 
           <div className="flex space-x-5 md:flex-col md:space-y-5 md:space-x-0 justify-between items-center pb-5">
             {socials.map(({ href, name, id }) => (
