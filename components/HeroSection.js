@@ -22,7 +22,7 @@ function HeroSection() {
   return (
     <div id="about" className="bg-$yellow  bg-center  relative ">
       <div
-        className={`px-5 md:px-10 mt-10 xl:px-20  relative flex flex-col md:flex-row justify-center md:justify-between gap-5  items-center  h-screen`}
+        className={`px-5 md:px-10 mt-10 xl:px-20  relative flex flex-col md:flex-row justify-center md:justify-between gap-5  items-center  min-h-screen`}
       >
         <div className=" order-2 md:order-1 ">
           <div className=" text-center md:text-left ">
@@ -49,7 +49,7 @@ function HeroSection() {
             </button>
           </div>
         </div>
-        <div className="order-1 md:order-2 flex flex-col  md:flex-row items-center gap-10 md:gap-20">
+        <div className="order-1 md:order-2 flex flex-col  md:flex-row items-center gap-5 sm:gap-10 md:gap-20">
           <div className="relative w-[200px] h-[300px] md:w-[300px] md:h-[500px] lg:w-[500px] lg:h-[500px]  transition duration-200 hover:rotate-2 ">
             <Image
               className="w-full h-full"
