@@ -22,7 +22,7 @@ function HeroSection() {
   return (
     <div id="about" className="bg-$yellow  bg-center  relative ">
       <div
-        className={`px-5 md:px-10 mt-10 xl:px-20  relative flex flex-col md:flex-row justify-center md:justify-between gap-5  items-center  min-h-screen`}
+        className={`px-5 sm:px-10  mt-10   relative flex flex-col md:flex-row justify-center md:justify-between gap-5  items-center  min-h-screen`}
       >
         <div className=" order-2 md:order-1 ">
           <div className=" text-center md:text-left ">

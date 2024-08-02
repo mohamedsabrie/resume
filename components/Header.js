@@ -15,8 +15,8 @@ function Header({active}) {
       ref={headerRef}
       className="header_container z-40 fixed w-screen bg-$black top-0 left-0  "
     >
-      <div className="container mx-auto">
-        <header className="  flex p-6 justify-between items-center text-white ">
+      <div className="px-5 sm:px-10 mx-auto">
+        <header className="  flex  py-6 justify-between items-center text-white ">
           {menuIsOpen && <NavMenu active={active} setMenuIsOpen={setMenuIsOpen} />}
           {/* right side */}
           <div className="">
@@ -37,6 +37,9 @@ function Header({active}) {
               </li>
               <li className={` ${active == 2  && "border px-2"} `}>
                 <a className="cursor-pointer" onClick={() => router.push("/projects") }>Projects</a>
+              </li>
+              <li className={` ${active == 3  && "border px-2"} `}>
+                <a className="cursor-pointer" onClick={() => router.push("/skills") }>Skills</a>
               </li>
            
               

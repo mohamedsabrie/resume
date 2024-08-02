@@ -38,6 +38,13 @@ const projects = [
     imageSrc: "/images/entaleq.jpg",
     imageAlt: "entaleq",
   },
+  {
+    id: 5,
+    name: "HuluX",
+    href: "https://hulu-clone-omega-six.vercel.app/",
+    imageSrc: "/images/hulu.jpg",
+    imageAlt: "hulu",
+  },
 
 
   // More products...

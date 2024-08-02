@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <Header active={1} />
-      <div>
+      <div >
         <HeroSection />
         <Footer />
       </div>

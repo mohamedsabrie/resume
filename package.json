@@ -21,10 +21,14 @@
     "tailwind-scrollbar-hide": "^1.1.5"
   },
   "devDependencies": {
+    "@iconify-icon/react": "^2.1.0",
+    "@types/node": "22.0.0",
+    "@types/react": "18.3.3",
     "autoprefixer": "^10.2.6",
     "eslint": "7.29.0",
     "eslint-config-next": "11.0.1",
     "postcss": "^8.3.5",
-    "tailwindcss": "^2.2.4"
+    "tailwindcss": "^2.2.4",
+    "typescript": "5.5.4"
   }
 }
