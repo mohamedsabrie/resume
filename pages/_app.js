@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import { NextSeo } from "next-seo";
+import { Analytics } from "@vercel/analytics/react"
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -26,6 +27,7 @@ function MyApp({ Component, pageProps }) {
        
       />
       <Component {...pageProps} />
+      <Analytics />
     </>
   );
 }
