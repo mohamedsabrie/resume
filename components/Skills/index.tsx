@@ -1,6 +1,7 @@
 import React from "react";
 import { Icon } from "@iconify-icon/react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const skills = [
   { name: "HTML", key: "html" },
@@ -13,7 +14,6 @@ const skills = [
   { name: "jQuery", key: "jquery" },
   { name: "Postman", key: "postman" },
   { name: "Redux", key: "redux" },
-  { name: "Styled Components", key: "styledcomponents" },
   { name: "Git", key: "git" },
   { name: "GitHub", key: "github-dark" },
   { name: "Bitbucket", key: "bitbucket-dark" },
@@ -22,9 +22,6 @@ const skills = [
   { name: "Sass", key: "sass" },
   { name: "Less", key: "less-dark" },
   { name: "Jest", key: "jest" },
-];
-
-const otherSkills = [
   {
     name: "React Query",
     path: "/skills/react-query.svg",
@@ -49,31 +46,28 @@ const otherSkills = [
     name: "Google Maps",
     path: "/skills/google-maps.svg",
   },
+  { name: "Styled Components", key: "styledcomponents" },
 ];
+
 function Skills() {
   return (
     <div
       id="skills"
       className="py-20 mt-10 bg-$green min-h-screen px-5 sm:px-10  "
     >
-      <div className="max-w-5xl mx-auto flex flex-wrap items-center justify-center  gap-5 sm:gap-10">
-        {skills.map((skill) => (
-          <div
-            key={skill.name}
+      <div className="max-w-5xl mx-auto grid grid-cols-2  xs:grid-cols-3 sm:flex sm:flex-wrap items-center justify-center  gap-5 sm:gap-10">
+        {skills.map(({ name, path, key }) => (
+          <motion.div
+            key={name}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
             className="flex flex-col items-center text-white font-semibold gap-y-1"
           >
-            <Icon height={50} icon={`skill-icons:${skill.key}`} />
-            <h3>{skill.name}</h3>
-          </div>
-        ))}
-        {otherSkills.map((skill) => (
-          <div
-            key={skill.name}
-            className="flex flex-col items-center text-white font-semibold gap-y-1"
-          >
-            <Image height={50} width={50} src={skill.path} alt={skill.name} />
-            <h3>{skill.name}</h3>
-          </div>
+            {path && <Image height={50} width={50} src={path} alt={name} />}
+            {key && <Icon height={50} icon={`skill-icons:${key}`} />}
+            <h3 className="text-center">{name}</h3>
+          </motion.div>
         ))}
       </div>
     </div>

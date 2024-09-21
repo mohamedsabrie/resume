@@ -6,14 +6,11 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
 
   theme: {
-    container: {
-      center: true,
+    extend: {
       screens: {
         xl: "1165.82px",
+        xs: "400px",
       },
-    },
-
-    extend: {
       colors: {
         primary: "#1A3EBC",
         bg: "#D0DCE9",
