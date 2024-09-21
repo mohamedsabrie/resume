@@ -1,11 +1,17 @@
 import "../styles/globals.css";
 import { NextSeo } from "next-seo";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+});
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
-        <NextSeo
+    <main className={poppins.className}>
+      <NextSeo
         title="Mohamed Sabry"
         titleTemplate="Mohamed Sabry"
         defaultTitle="Mohamed Sabry"
@@ -14,7 +20,8 @@ function MyApp({ Component, pageProps }) {
         openGraph={{
           url: "https://mohamed-sabry-portfolio.vercel.app/",
           title: "Mohamed Sabry",
-          description: "A front end web developer, who loves to develop beautiful websites and web apps . I have been coding for about 2 years now. I am professional using react.js-next.js ",
+          description:
+            "A front end web developer, who loves to develop beautiful websites and web apps . I have been coding for about 2 years now. I am professional using react.js-next.js ",
           images: [
             {
               url: "/og-image.svg",
@@ -24,11 +31,10 @@ function MyApp({ Component, pageProps }) {
             },
           ],
         }}
-       
       />
       <Component {...pageProps} />
       <Analytics />
-    </>
+    </main>
   );
 }
 

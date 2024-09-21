@@ -4,6 +4,13 @@ import Project from "./Project";
 
 const projects = [
   {
+    id: 3,
+    name: "ShaperAid",
+    href: "https://shaperaid.vercel.app/",
+    imageSrc: "/images/shaperaid.jpg",
+    imageAlt: "shaperaid",
+  },
+  {
     id: 1,
     name: "GDD Gaza",
     href: "https://gdd.org/gaza",
@@ -15,21 +22,15 @@ const projects = [
     name: "Sahm",
     href: "https://sahmsolution.com/",
     imageSrc: "/images/sahm.jpg",
-    imageAlt: "entaleq-logo",
+    imageAlt: "sahm-logo",
   },
-  {
-    id: 3,
-    name: "ShaperAid",
-    href: "https://shaperaid.vercel.app/",
-    imageSrc: "/images/shaperaid.jpg",
-    imageAlt: "shaperaid",
-  },
+
   {
     id: 4,
     name: "Helm Recruitment",
     href: "https://recruitment.helmegypt.org/",
     imageSrc: "/images/helm.jpg",
-    imageAlt: "khatwa-logo",
+    imageAlt: "Helm-Recruitment-logo",
   },
   {
     id: 5,
@@ -45,7 +46,6 @@ const projects = [
     imageSrc: "/images/hulu.jpg",
     imageAlt: "hulu",
   },
-
 
   // More products...
 ];
