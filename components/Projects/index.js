@@ -41,10 +41,11 @@ const projects = [
   },
   {
     id: 5,
-    name: "HuluX",
-    href: "https://hulu-clone-omega-six.vercel.app/",
-    imageSrc: "/images/hulu.jpg",
-    imageAlt: "hulu",
+    name: "Trailerflix",
+
+    href: "https://trailerflix-app.vercel.app/",
+    imageSrc: "/images/Trailerflix.jpg",
+    imageAlt: "trailerflix-app",
   },
 
   // More products...
