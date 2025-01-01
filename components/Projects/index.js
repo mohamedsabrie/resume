@@ -1,8 +1,13 @@
-import Link from "next/link";
-import Image from "next/image";
 import Project from "./Project";
 
 const projects = [
+  {
+    id: 7,
+    name: "Yam",
+    href: "https://yamcyber.sa/",
+    imageSrc: "/images/yam.jpg",
+    imageAlt: "yam",
+  },
   {
     id: 3,
     name: "ShaperAid",
@@ -40,7 +45,7 @@ const projects = [
     imageAlt: "entaleq",
   },
   {
-    id: 5,
+    id: 6,
     name: "Trailerflix",
 
     href: "https://trailerflix-app.vercel.app/",
