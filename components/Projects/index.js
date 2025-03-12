@@ -2,6 +2,13 @@ import Project from "./Project";
 
 const projects = [
   {
+    id: 8,
+    name: "iKnowly",
+    href: "https://www.iknowly.com/",
+    imageSrc: "/images/iknowly.webp",
+    imageAlt: "iKnowly",
+  },
+  {
     id: 7,
     name: "Yam",
     href: "https://yamcyber.sa/",
