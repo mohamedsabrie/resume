@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import { NextSeo } from "next-seo";
 import { Analytics } from "@vercel/analytics/react";
 import { Poppins } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -32,8 +33,9 @@ function MyApp({ Component, pageProps }) {
           ],
         }}
       />
-      <Component {...pageProps} />
+      <SpeedInsights />
       <Analytics />
+      <Component {...pageProps} />
     </main>
   );
 }
