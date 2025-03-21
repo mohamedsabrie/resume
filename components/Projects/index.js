@@ -9,6 +9,13 @@ const projects = [
     imageAlt: "iKnowly",
   },
   {
+    id: 9,
+    name: "BETA PROPERTY ",
+    href: "https://beta-property.vercel.app/",
+    imageSrc: "/images/beta-property.webp",
+    imageAlt: "iKnowly",
+  },
+  {
     id: 7,
     name: "Yam",
     href: "https://yamcyber.sa/",
