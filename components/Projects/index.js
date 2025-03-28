@@ -32,7 +32,7 @@ const projects = [
   {
     id: 1,
     name: "GDD Gaza",
-    href: "https://gdd.org/gaza",
+    href: "https://dashboard.gdd.org/ar",
     imageSrc: "/images/gdd.jpg",
     imageAlt: "gdd-logo",
   },
