@@ -41,10 +41,12 @@ function HeroSection() {
             </p>
           </div>
           <div className="mt-10 text-center md:text-left">
-            <button className="btn p-4 min-w-[160px] min-h-[48px] hover:scale-105 transition-transform">
-              <a href="/mohamed-sabry-cv.pdf" 
-                 download
-                 className="inline-block w-full h-full">
+            <button>
+              <a
+                href="/mohamed-sabry-cv.pdf"
+                download
+                className="inline-block w-full h-full btn p-4 min-w-[160px] min-h-[48px] hover:scale-105 transition-transform"
+              >
                 Download CV
               </a>
             </button>
@@ -74,7 +76,7 @@ function HeroSection() {
             ))}
 
             <div className="bg-white rounded-full hover:scale-105 transition-transform">
-              <a 
+              <a
                 href="mailto:abosaadmohamed@gmail.com"
                 aria-label="Send me an email"
                 className="flex items-center justify-center min-w-[48px] min-h-[48px]"
