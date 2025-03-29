@@ -41,9 +41,10 @@ function HeroSection() {
             </p>
           </div>
           <div className="mt-10 text-center md:text-left">
-            <button className="btn">
-              {" "}
-              <a href="/mohamed-sabry-cv.pdf" download>
+            <button className="btn p-4 min-w-[160px] min-h-[48px] hover:scale-105 transition-transform">
+              <a href="/mohamed-sabry-cv.pdf" 
+                 download
+                 className="inline-block w-full h-full">
                 Download CV
               </a>
             </button>
@@ -54,26 +55,31 @@ function HeroSection() {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="relative w-[200px] h-[300px] md:w-[300px] md:h-[500px] lg:w-[500px] lg:h-[500px]  transition duration-200 hover:rotate-2 "
+            className="relative w-[200px] h-[300px] md:w-[300px] md:h-[500px] lg:w-[500px] lg:h-[500px] transition duration-200 hover:rotate-2"
           >
             <Image
               className="w-full h-full"
               src="/svgs/hero_img.svg"
-              alt=""
+              alt="Developer illustration"
+              priority={true}
               layout="fill"
             />
           </motion.div>
 
-          <div className="flex space-x-5 md:flex-col md:space-y-5 md:space-x-0 justify-between items-center pb-5">
-            {socials.map(({ href, name, id }) => (
-              <div key={id} className=" ">
+          <div className="flex space-x-5  md:flex-col md:space-y-5 md:space-x-0 justify-between items-center pb-5">
+            {socials.map(({ href, id }) => (
+              <div key={id} className=" hover:scale-105 transition-transform">
                 <SocialIcon url={href} fgColor="#000" bgColor="#FFF" />
               </div>
             ))}
 
-            <div className="bg-white p-2 rounded-full">
-              <a href="mailto:abosaadmohamed@gmail.com">
-                <MailIcon className="h-8 text-black " />
+            <div className="bg-white rounded-full hover:scale-105 transition-transform">
+              <a 
+                href="mailto:abosaadmohamed@gmail.com"
+                aria-label="Send me an email"
+                className="flex items-center justify-center min-w-[48px] min-h-[48px]"
+              >
+                <MailIcon className="h-8 text-black" aria-hidden="true" />
               </a>
             </div>
           </div>
