@@ -1,12 +1,11 @@
 import { useRef, useState } from "react";
 import { MenuIcon } from "@heroicons/react/outline";
 import NavMenu from "./NavMenu";
-import { useRouter } from "next/dist/client/router";
+import Link from "next/link";
 
 function Header({active}) {
   const headerRef = useRef(null);
   const [menuIsOpen, setMenuIsOpen] = useState(false);
-  const router=  useRouter();
 
   
 
@@ -20,7 +19,9 @@ function Header({active}) {
           {menuIsOpen && <NavMenu active={active} setMenuIsOpen={setMenuIsOpen} />}
           {/* right side */}
           <div className="">
-            <h2 className="font-bold text-2xl cursor-pointer" onClick={() => router.push("/")}>Mo.Sabry</h2>
+            <Link href="/" className="font-bold text-2xl cursor-pointer">
+              Mo.Sabry
+            </Link>
           </div>
 
           {/* left side */}
@@ -33,16 +34,20 @@ function Header({active}) {
           <nav className="hidden sm:inline-flex">
             <ul className="space-x-8 text-lg flex font-semibold">
               <li className={` ${active == 1  && "border px-2"} `}>
-                <a className="cursor-pointer " onClick={() => router.push("/") }>About</a>
+                <Link href="/" className="cursor-pointer">
+                  About
+                </Link>
               </li>
               <li className={` ${active == 2  && "border px-2"} `}>
-                <a className="cursor-pointer" onClick={() => router.push("/projects") }>Projects</a>
+                <Link href="/projects" className="cursor-pointer">
+                  Projects
+                </Link>
               </li>
               <li className={` ${active == 3  && "border px-2"} `}>
-                <a className="cursor-pointer" onClick={() => router.push("/skills") }>Skills</a>
+                <Link href="/skills" className="cursor-pointer">
+                  Skills
+                </Link>
               </li>
-           
-              
             </ul>
           </nav>
         </header>

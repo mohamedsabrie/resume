@@ -12,6 +12,7 @@ function Project({ imageSrc, name, id, href, imageAlt }) {
     >
       <div className="   rounded-lg overflow-hidden ">
         <a
+          rel="noreferrer"
           href={href}
           target="_blank"
           className="relative overflow-hidden group rounded-lg   flex flex-col items-center justify-center    hover:scale-105  transition transform duration-500 ease-out  cursor-pointer "
