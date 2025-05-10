@@ -3,6 +3,7 @@ import { NextSeo } from "next-seo";
 import { Analytics } from "@vercel/analytics/react";
 import { Poppins } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import ParticlesBackground from "../components/ParticlesBackground";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -35,6 +36,7 @@ function MyApp({ Component, pageProps }) {
       />
       <SpeedInsights />
       <Analytics />
+      <ParticlesBackground />
       <Component {...pageProps} />
     </main>
   );

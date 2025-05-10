@@ -16,13 +16,13 @@ function NavMenu({ setMenuIsOpen, active }) {
       />
       <ul className="  flex flex-col h-screen items-center justify-center space-y-10 text-3xl ">
         <li className={` ${active == 1 && "border px-2"} `}>
-          <a className="cursor-pointer " onClick={() => router.push("/")}>
+          <a className="cursor-pointer hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-600 transition-colors duration-300" onClick={() => router.push("/")}>
             About
           </a>
         </li>
         <li className={` ${active == 2 && "border px-2"} `}>
           <a
-            className="cursor-pointer"
+            className="cursor-pointer hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-600 transition-colors duration-300"
             onClick={() => router.push("/projects")}
           >
             Projects
@@ -30,7 +30,7 @@ function NavMenu({ setMenuIsOpen, active }) {
         </li>
         <li className={` ${active == 3 && "border px-2"} `}>
           <a
-            className="cursor-pointer"
+            className="cursor-pointer hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-600 transition-colors duration-300"
             onClick={() => router.push("/skills")}
           >
             Skills

@@ -53,7 +53,7 @@ function Skills() {
   return (
     <div
       id="skills"
-      className="py-20 mt-10 bg-$green min-h-screen px-5 sm:px-10  "
+      className="py-20 mt-10  px-5 sm:px-10  relative z-10   "
     >
       <div className="max-w-5xl mx-auto grid grid-cols-2  xs:grid-cols-3 sm:flex sm:flex-wrap items-center justify-center  gap-5 sm:gap-10">
         {skills.map(({ name, path, key }) => (

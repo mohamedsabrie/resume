@@ -10,29 +10,27 @@ function Project({ imageSrc, name, id, href, imageAlt }) {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="   rounded-lg overflow-hidden ">
+      <div className="rounded-xl overflow-hidden bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 shadow-md hover:shadow-lg">
         <a
           rel="noreferrer"
           href={href}
           target="_blank"
-          className="relative overflow-hidden group rounded-lg   flex flex-col items-center justify-center    hover:scale-105  transition transform duration-500 ease-out  cursor-pointer "
+          className="relative overflow-hidden group rounded-xl flex flex-col items-center justify-center hover:scale-[1.02] transition-transform duration-300 cursor-pointer"
         >
-          <div className="hidden group-hover:block transition transform duration-500 ease-out absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 p-3 bg-gray-700 rounded-lg">
-            <EyeIcon className="h-7 text-white" />
+          <div className="hidden group-hover:flex transition-all duration-300 absolute inset-0 bg-black/30 items-center justify-center z-10">
+            <EyeIcon className="h-8 text-white" />
           </div>
           <Image
-            className="rounded-lg   "
+            className="rounded-xl object-cover w-full h-full"
             src={imageSrc}
             height={200}
             width={500}
-            objectFit="contain"
             alt={imageAlt}
           />
-          <div className="absolute group-hover:bg-black/40 top-0 left-0 h-full w-full    transition transform duration-500 ease-out " />
         </a>
       </div>
 
-      <h3 className="text-center mt-2 text-lg sm:text-2xl text-white font-semibold">
+      <h3 className="text-center mt-4 text-xl sm:text-2xl font-medium text-gray-200">
         {name}
       </h3>
     </motion.div>

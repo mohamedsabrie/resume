@@ -72,8 +72,11 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div id="projects" className="py-20 mt-10 bg-$green min-h-screen">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-8 px-5 sm:px-10">
+    <div
+      id="projects"
+      className="bg-[url('/public/images/new-background.jpg')] bg-cover bg-center relative overflow-hidden py-20 mt-10  min-h-screen"
+    >
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-8 px-5 sm:px-10 max-w-7xl mx-auto">
         {projects.map((project) => (
           <Project key={project.id} {...project} />
         ))}

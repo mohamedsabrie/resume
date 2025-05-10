@@ -5,9 +5,9 @@ import Skills from "../components/Skills";
 
 function SkillsPage() {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Header active={3} />
-      <div>
+      <div className="flex-1 flex flex-col justify-between">
         <Skills />
         <Footer />
       </div>
