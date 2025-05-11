@@ -53,20 +53,23 @@ function Skills() {
   return (
     <div
       id="skills"
-      className="py-20 mt-10  px-5 sm:px-10  relative z-10   "
+      className="py-20 mt-10 px-5 sm:px-10 relative z-10"
     >
-      <div className="max-w-5xl mx-auto grid grid-cols-2  xs:grid-cols-3 sm:flex sm:flex-wrap items-center justify-center  gap-5 sm:gap-10">
-        {skills.map(({ name, path, key }) => (
+      <div className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-items-center">
+        {skills.map(({ name, path, key }, index) => (
           <motion.div
             key={name}
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="flex flex-col items-center text-white font-semibold gap-y-1"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            className="flex flex-col items-center text-white font-semibold gap-y-2 min-h-[90px]"
           >
-            {path && <Image height={50} width={50} src={path} alt={name} />}
-            {key && <Icon height={50} icon={`skill-icons:${key}`} />}
-            <h3 className="text-center">{name}</h3>
+            <div className="h-[50px] flex items-center justify-center">
+              {path && <Image height={50} width={50} src={path} alt={name} />}
+              {key && <Icon height={50} icon={`skill-icons:${key}`} />}
+            </div>
+            <h3 className="text-center text-sm">{name}</h3>
           </motion.div>
         ))}
       </div>
