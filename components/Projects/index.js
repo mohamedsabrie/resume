@@ -9,6 +9,13 @@ const projects = [
     imageAlt: "iKnowly",
   },
   {
+    id: 10,
+    name: "Kindi",
+    href: "https://kindiplatform.com/",
+    imageSrc: "/images/kindi.webp",
+    imageAlt: "kindi",
+  },
+  {
     id: 9,
     name: "BETA PROPERTY ",
     href: "https://beta-property.vercel.app/",
